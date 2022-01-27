@@ -5,9 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso Platzi | JavaScript Figuras Geométricas</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+        .figures-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+        }
+        .figures-section {
+            display: inline;
+            justify-content: center;
+        }
+        .cuadrado_img {
+            background-image: url(https://www.smartick./blog/wp-content/uploads/cuadrado-.png);
+            background-size: 180px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 168px;
+            width: 210px;
+        }
+        .triangulo_img {
+            background-image: url(https://icons555.com/images/icons-red/image_icon_triangle_outline_pic_512x512.png);
+            background-size: 184px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 168px;
+            width: 210px;
+        }
+        .circulo_img {
+            background-image: url(https://icones.pro/wp-content/uploads/2021/04/icone-cercle-vert.png);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 168px;
+            width: 210px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Calculando cuadrados, triángulos, y círculos</h1>
+    <header>
+        <h1>Calcular Cuadrados, Triángulos, y Círculos Sin Tanto Rollo 😎</h1>
+        <p>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</p>
+    </header>
+
+    <section>
+
+        <h3>Selecciona la figura que quieras calcular:</h3>
+
+        <form>
+            <div class="figures-container">
+                <div class="figures-section">
+                    
+                    <label for="ladoCua">
+                        <div class="cuadrado_img"></div>
+                        <h4>Cuadrado</h4>
+                    </label>
+        
+                    <input type="number" id="ladoCua">
+    
+                    <br>
+        
+                    <button type="button" onclick="calcularCuadrado_P()">Calcular Perímetro</button>
+                    <br>
+                    <button type="button" onclick="calcularCuadrado_A()">Calcular Área</button>
+
+                    <h4 id="cuadrado_result">0</h4>
+                </div>
+    
+                <div class="figures-section">
+                    <label for="valor2">
+                        <div class="triangulo_img"></div>
+                        <h4>Triángulo</h4>
+                    </label>
+    
+                    <input type="number" id="ladoT1">
+                    <br>
+                    <input type="number" id="ladoT2">
+                    <br>
+                    <input type="number" id="base">
+                    <br>
+                    <input type="number" id="altura">
+                    <br>
+    
+                    <button type="button" onclick="calcularTriangulo_P()">Calcular Perímetro</button>
+                    <br>
+                    <button type="button" onclick="calcularTriangulo_A()">Calcular Área</button>
+
+                    <h4 id="triangulo_result">0</h4>
+                </div>
+    
+                <div class="figures-section">
+                    <label for="valor3">
+                        <div class="circulo_img"></div>
+                        <h4>Círculo</h4>
+                    </label>
+    
+                    <input type="number" id="radio">
+    
+                    <br>
+    
+                    <button type="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>
+                    <br>
+                    <button type="button" onclick="calcularCirculo_A()">Calcular Área</button>
+
+                    <h4 id="circulo_result">0</h4>
+                </div>
+            </div>
+        </form>
+    </section>
+
     <script src="./figuras.js"></script>
 </body>
 </html>

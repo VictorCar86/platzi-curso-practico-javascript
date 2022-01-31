@@ -11,7 +11,7 @@ function areaCuadrado(lado){
 // Código Triángulo
 
 function perimetroTriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base;
+    return parseInt(lado1) + parseInt(lado2) + parseInt(base);
 }
 
 function areaTriangulo(base, altura){
@@ -44,7 +44,7 @@ function calcularCuadrado_P(){
     const value = input.value;
     
     const perimetro = perimetroCuadrado(value);
-    cuadrado_result.innerHTML = perimetro;
+    cuadrado_result.innerHTML = perimetro + "cm";
 }
 
 function calcularCuadrado_A(){
@@ -52,7 +52,7 @@ function calcularCuadrado_A(){
     const value = input.value;
 
     const area = areaCuadrado(value);
-    cuadrado_result.innerHTML = area;
+    cuadrado_result.innerHTML = area + "cm2";
 }
 
 // Triángulo Función
@@ -67,8 +67,15 @@ function calcularTriangulo_P(){
     const input_base = document.getElementById("base");
     const base = input_base.value;
 
-    const perimetro = perimetroTriangulo(lado1, lado2, base);
-    triangulo_result.innerHTML = perimetro;
+    if (!lado1 == "" && !lado2 == "" && !base == "") {
+        if (!lado1 == 0 && !lado2 == 0 && !base == 0) {
+            const perimetro = perimetroTriangulo(lado1, lado2, base);
+            triangulo_result.innerHTML = perimetro + "cm";
+        }
+    }
+    else {
+        triangulo_result.innerHTML = "Por favor ingrese los datos requeridos";
+    }
 }
 
 function calcularTriangulo_A(){
@@ -78,8 +85,15 @@ function calcularTriangulo_A(){
     const input_altura = document.getElementById("altura");
     const altura = input_altura.value;
 
-    const area = areaTriangulo(base, altura);
-    triangulo_result.innerHTML = area;
+    if (!base == "" && !altura == "") {
+        if (!base == 0 && !altura == 0) {
+            const area = areaTriangulo(base, altura);
+            triangulo_result.innerHTML = area + "cm2";
+        }
+    }
+    else {
+        triangulo_result.innerHTML = "Por favor ingrese los datos requeridos";
+    }
 }
 
 // Círculo Función
@@ -89,7 +103,7 @@ function calcularCirculo_P(){
     const value = input.value;
 
     const perimetro = perimetroCirculo(value);
-    circulo_result.innerHTML = perimetro;
+    circulo_result.innerHTML = perimetro + "cm";
 }
 
 function calcularCirculo_A(){
@@ -97,5 +111,5 @@ function calcularCirculo_A(){
     const value = input.value;
 
     const area = areaCirculo(value);
-    circulo_result.innerHTML = area;
+    circulo_result.innerHTML = area + "cm2";
 }

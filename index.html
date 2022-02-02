@@ -29,13 +29,30 @@
             display: grid;
             justify-content: center;
         }
+        .figures-first {
+            width: 308px;
+        }
+        .figures-second {
+            width: 308px;
+        }
+        .figures-third {
+            width: 308px;
+        }
+        .input {
+            width: 300px;
+            height: 30px;
+        }
+        .button {
+            width: 250px;
+            height: 30px;
+            margin-top: 20px;
+        }
         .cuadrado_img {
             background-image: url(http://assets.stickpng.com/thumbs/58afdac9829958a978a4a691.png);
             background-size: 270px;
             background-repeat: no-repeat;
             background-position: center;
             height: 168px;
-            width: 210px;
         }
         .triangulo_img {
             background-image: url(https://icons555.com/images/icons-red/image_icon_triangle_outline_pic_512x512.png);
@@ -43,7 +60,6 @@
             background-repeat: no-repeat;
             background-position: center;
             height: 168px;
-            width: 210px;
         }
         .circulo_img {
             background-image: url(https://icones.pro/wp-content/uploads/2021/04/icone-cercle-vert.png);
@@ -51,7 +67,6 @@
             background-repeat: no-repeat;
             background-position: center;
             height: 168px;
-            width: 210px;
         }
         .titles {
             margin: 10px 0;
@@ -71,75 +86,80 @@
         <form>
             <div class="figures-container">
                 <div class="figures-section">
-                    
-                    <label for="ladoCua">
-                        <div class="cuadrado_img"></div>
-                        <h4>Cuadrado</h4>
-                    </label>
+                    <div class="figures-first">
+                        <label for="ladoCua">
+                            <div class="cuadrado_img"></div>
+                            <h4>Cuadrado</h4>
+                        </label>
+            
+                        <input type="number" id="ladoCua" class="input">
         
-                    <input type="number" id="ladoCua">
+                        <br>
+            
+                        <button type="button" class="button" onclick="calcularCuadrado_P()">Calcular Perímetro</button>
+                        <br>
+                        <button type="button" class="button" onclick="calcularCuadrado_A()">Calcular Área</button>
     
-                    <br>
-        
-                    <button type="button" onclick="calcularCuadrado_P()">Calcular Perímetro</button>
-                    <br>
-                    <button type="button" onclick="calcularCuadrado_A()">Calcular Área</button>
-
-                    <h4 id="cuadrado_result">✔</h4>
+                        <h4 id="cuadrado_result">✔</h4>
+                    </div>
                 </div>
     
                 <div class="figures-section">
-                    <label for="valor2">
-                        <div class="triangulo_img"></div>
-                        <h4>Triángulo</h4>
-                    </label>
-                    
-                    <label for="ladoT1">
-                        <h4 class="titles">(P) Primer lado:</h4>
-                    </label>
-                    <input type="number" id="ladoT1">
-                    <br>
-
-                    <label for="ladoT2">
-                        <h4 class="titles">(P) Segundo lado:</h4>
-                    </label>
-                    <input type="number" id="ladoT2">
-                    <br>
-
-                    <label for="base">
-                        <h4 class="titles">(P - A) Base:</h4>
-                    </label>
-                    <input type="number" id="base">
-                    <br>
-
-                    <label for="altura">
-                        <h4 class="titles">(A) Altura:</h4>
-                    </label>
-                    <input type="number" id="altura">
-                    <br>
+                    <div class="figures-second">
+                        <label for="valor2">
+                            <div class="triangulo_img"></div>
+                            <h4>Triángulo</h4>
+                        </label>
+                        
+                        <label for="ladoT1">
+                            <h4 class="titles">(P) Primer lado:</h4>
+                        </label>
+                        <input type="number" id="ladoT1" class="input">
+                        <br>
     
-                    <button type="button" onclick="calcularTriangulo_P()">Calcular Perímetro</button>
-                    <br>
-                    <button type="button" onclick="calcularTriangulo_A()">Calcular Área</button>
-
-                    <h4 id="triangulo_result">✔</h4>
+                        <label for="ladoT2">
+                            <h4 class="titles">(P) Segundo lado:</h4>
+                        </label>
+                        <input type="number" id="ladoT2" class="input">
+                        <br>
+    
+                        <label for="base">
+                            <h4 class="titles">(P - A) Base:</h4>
+                        </label>
+                        <input type="number" id="base" class="input">
+                        <br>
+    
+                        <label for="altura">
+                            <h4 class="titles">(A) Altura:</h4>
+                        </label>
+                        <input type="number" id="altura" class="input">
+                        <br>
+        
+                        <button type="button" class="button" onclick="calcularTriangulo_P()">Calcular Perímetro</button>
+                        <br>
+                        <button type="button" class="button" onclick="calcularTriangulo_A()">Calcular Área</button>
+    
+                        <h4 id="triangulo_result">✔</h4>
+                    </div>
                 </div>
 
                 <div class="figures-section">
-                    <label for="valor3">
-                        <div class="circulo_img"></div>
-                        <h4>Círculo</h4>
-                    </label>
+                    <div class="figures-third">
+                        <label for="valor3">
+                            <div class="circulo_img"></div>
+                            <h4>Círculo</h4>
+                        </label>
+        
+                        <input type="number" id="radio" class="input">
+        
+                        <br>
+        
+                        <button type="button" class="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>
+                        <br>
+                        <button type="button" class="button" onclick="calcularCirculo_A()">Calcular Área</button>
     
-                    <input type="number" id="radio">
-    
-                    <br>
-    
-                    <button type="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>
-                    <br>
-                    <button type="button" onclick="calcularCirculo_A()">Calcular Área</button>
-
-                    <h4 id="circulo_result">✔</h4>
+                        <h4 id="circulo_result">✔</h4>
+                    </div>
                 </div>
             </div>
         </form>

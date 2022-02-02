@@ -10,7 +10,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: gainsboro;
+            background-color: #bd48f9;
+            color: white;
         }
         header {
             display: grid;
@@ -41,11 +42,24 @@
         .input {
             width: 300px;
             height: 30px;
+            background-color: #b85aff;
+            border-radius: 18px;
+            text-align: center;
+            color: #34194c;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid #6e3685;
         }
         .button {
-            width: 250px;
-            height: 30px;
+            background-color: #d36aff;
+            border: white 2px solid;
+            border-radius: 16px;
             margin-top: 20px;
+            width: 168px;
+            height: 32px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold
         }
         .cuadrado_img {
             background-image: url(http://assets.stickpng.com/thumbs/58afdac9829958a978a4a691.png);
@@ -76,7 +90,7 @@
 <body>
     <header>
         <h1>Calcular Cuadrados, Triángulos, y Círculos Sin Tanto Rollo 😎</h1>
-        <p>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</p>
+        <h4>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</h4>
     </header>
 
     <section>
@@ -90,6 +104,7 @@
                         <label for="ladoCua">
                             <div class="cuadrado_img"></div>
                             <h4>Cuadrado</h4>
+                            <h4>Lado:</h4>
                         </label>
             
                         <input type="number" id="ladoCua" class="input">
@@ -106,7 +121,7 @@
     
                 <div class="figures-section">
                     <div class="figures-second">
-                        <label for="valor2">
+                        <label for="ladoT1">
                             <div class="triangulo_img"></div>
                             <h4>Triángulo</h4>
                         </label>
@@ -145,13 +160,13 @@
 
                 <div class="figures-section">
                     <div class="figures-third">
-                        <label for="valor3">
+                        <label for="radio">
                             <div class="circulo_img"></div>
                             <h4>Círculo</h4>
+                            <h4>Radio:</h4>
                         </label>
-        
+                        
                         <input type="number" id="radio" class="input">
-        
                         <br>
         
                         <button type="button" class="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>

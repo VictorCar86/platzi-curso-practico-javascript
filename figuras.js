@@ -43,16 +43,26 @@ function calcularCuadrado_P(){
     const input = document.getElementById("ladoCua");
     const value = input.value;
     
-    const perimetro = perimetroCuadrado(value);
-    cuadrado_result.innerHTML = perimetro + "cm";
+    if (!value == "" && !value == 0) {
+        const perimetro = perimetroCuadrado(value);
+        cuadrado_result.innerHTML = perimetro + "cm";
+    }
+    else {
+        cuadrado_result.innerHTML = "Por favor ingrese los datos requeridos";
+    }
 }
 
 function calcularCuadrado_A(){
     const input = document.getElementById("ladoCua");
     const value = input.value;
 
-    const area = areaCuadrado(value);
-    cuadrado_result.innerHTML = area + "cm2";
+    if (!value == "" && !value == 0) {
+        const area = areaCuadrado(value);
+        cuadrado_result.innerHTML = area + "cm2";
+    }
+    else {
+        cuadrado_result.innerHTML = "Por favor ingrese los datos requeridos"
+    }
 }
 
 // Triángulo Función
@@ -102,14 +112,24 @@ function calcularCirculo_P(){
     const input = document.getElementById("radio");
     const value = input.value;
 
-    const perimetro = perimetroCirculo(value);
-    circulo_result.innerHTML = perimetro + "cm";
+    if (!value == "" && !value == 0) {
+        const perimetro = perimetroCirculo(value);
+        circulo_result.innerHTML = perimetro + "cm";
+    }
+    else {
+        circulo_result.innerHTML = "Por favor ingrese los datos requeridos";
+    }
 }
 
 function calcularCirculo_A(){
     const input = document.getElementById("radio");
     const value = input.value;
 
-    const area = areaCirculo(value);
-    circulo_result.innerHTML = area + "cm2";
+    if (!value == "" && !value == 0) {
+        const area = areaCirculo(value);
+        circulo_result.innerHTML = area + "cm2";
+    }
+    else {
+        circulo_result.innerHTML = "Por favor ingrese los datos requeridos";
+    }
 }

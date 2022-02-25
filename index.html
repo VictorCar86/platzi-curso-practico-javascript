@@ -12,11 +12,13 @@
         body {
             background-color: #bd48f9;
             color: white;
+            margin: 0;
         }
         header {
             display: grid;
             justify-content: center;
             text-align: center;
+            background-color: #9e36d2;
         }
         h3 {
             text-align: center;
@@ -25,6 +27,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             text-align: center;
+        }
+        .new_color_figures{
+            border: 3px solid #bd48f9;
+        }
+        .new_color_figures:hover {
+            background-color: #b138ef;
+            border: 3px solid #8230ac;
+            border-radius: 5px;
         }
         .figures-section {
             display: grid;
@@ -49,6 +59,13 @@
             font-size: 20px;
             font-weight: bold;
             border: 2px solid #6e3685;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         .button {
             background-color: #d36aff;
@@ -61,26 +78,12 @@
             font-size: 15px;
             font-weight: bold
         }
-        .cuadrado_img {
-            background-image: url(http://assets.stickpng.com/thumbs/58afdac9829958a978a4a691.png);
-            background-size: 270px;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 168px;
+        .images {
+            height: 200px;
+            width: 200px;
         }
         .triangulo_img {
-            background-image: url(https://icons555.com/images/icons-red/image_icon_triangle_outline_pic_512x512.png);
-            background-size: 184px;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 168px;
-        }
-        .circulo_img {
-            background-image: url(https://icones.pro/wp-content/uploads/2021/04/icone-cercle-vert.png);
-            background-size: 200px;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 168px;
+            width: 150px;
         }
         .titles {
             margin: 10px 0;
@@ -90,19 +93,19 @@
 <body>
     <header>
         <h1>Calcular Cuadrados, Triángulos, y Círculos Sin Tanto Rollo 😎</h1>
-        <h4>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</h4>
     </header>
-
+    
     <section>
 
+        <h3>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</h3>
         <h3 style="margin-bottom: 50px;">Selecciona la figura que quieras calcular:</h3>
 
         <form>
             <div class="figures-container">
-                <div class="figures-section">
+                <div class="figures-section new_color_figures">
                     <div class="figures-first">
                         <label for="ladoCua">
-                            <div class="cuadrado_img"></div>
+                            <img class="images" src="./assets/cuadrado.png">
                             <h4>Cuadrado</h4>
                             <h4>Lado:</h4>
                         </label>
@@ -119,10 +122,10 @@
                     </div>
                 </div>
     
-                <div class="figures-section">
+                <div class="figures-section new_color_figures">
                     <div class="figures-second">
                         <label for="ladoT1">
-                            <div class="triangulo_img"></div>
+                            <img class="images triangulo_img" src="./assets/triangulo.png">
                             <h4>Triángulo</h4>
                         </label>
                         
@@ -158,10 +161,10 @@
                     </div>
                 </div>
 
-                <div class="figures-section">
+                <div class="figures-section new_color_figures">
                     <div class="figures-third">
                         <label for="radio">
-                            <div class="circulo_img"></div>
+                            <img class="images" src="./assets/circulo.png">
                             <h4>Círculo</h4>
                             <h4>Radio:</h4>
                         </label>
@@ -172,7 +175,7 @@
                         <button type="button" class="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>
                         <br>
                         <button type="button" class="button" onclick="calcularCirculo_A()">Calcular Área</button>
-    
+
                         <h4 id="circulo_result">✔</h4>
                     </div>
                 </div>

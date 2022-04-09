@@ -15,7 +15,7 @@ function perimetroTriangulo(lado1, lado2, base){
 }
 
 function areaTriangulo(base, altura){
-    return (base * altura) / 2; 
+    return (base * altura) / 2;
 }
 
 // Código Círculo
@@ -42,7 +42,7 @@ function areaCirculo(radio){
 function calcularCuadrado_P(){
     const input = document.getElementById("ladoCua");
     const value = input.value;
-    
+
     if (!value == "" && !value == 0) {
         const perimetro = perimetroCuadrado(value);
         cuadrado_result.innerHTML = perimetro + "cm";

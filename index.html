@@ -24,30 +24,48 @@
             text-align: center;
         }
         .figures-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: space-around;
             text-align: center;
+            color: black;
         }
         .new_color_figures{
-            border: 3px solid #bd48f9;
+            background-color: white;
+            border: 3px solid #494949;
+            border-radius: 20px;
         }
         .new_color_figures:hover {
-            background-color: #b138ef;
-            border: 3px solid #8230ac;
-            border-radius: 5px;
+            background-color: #f9f5fd;
+            border: 3px solid #494949;
+            border-radius: 20px;
         }
-        .figures-section {
-            display: grid;
-            justify-content: center;
+        .figures-section-1 {
+            height: 520px;
+            width: 400px;
         }
-        .figures-first {
-            width: 308px;
+        .images-1 {
+            height: 200px;
+            width: 200px;
         }
-        .figures-second {
-            width: 308px;
+        .figures-section-2 {
+            width: 400px;
+            height: 740px;
         }
-        .figures-third {
-            width: 308px;
+        .images-2 {
+            height: 235px;
+            width: 180px;
+        }
+        .images-2 + h4 {
+            margin-top: 0;
+        }
+        .figures-section-3 {
+            height: 520px;
+            width: 400px;
+        }
+        .images-3 {
+            height: 195px;
+            width: 195px;
+            margin-top: 20px;
         }
         .input {
             width: 300px;
@@ -69,21 +87,14 @@
         }
         .button {
             background-color: #d36aff;
-            border: white 2px solid;
+            border: #6e3685 2px solid;
             border-radius: 16px;
             margin-top: 20px;
             width: 168px;
             height: 32px;
-            color: white;
+            color: black;
             font-size: 15px;
             font-weight: bold
-        }
-        .images {
-            height: 200px;
-            width: 200px;
-        }
-        .triangulo_img {
-            width: 150px;
         }
         .titles {
             margin: 10px 0;
@@ -94,7 +105,7 @@
     <header>
         <h1>Calcular Cuadrados, Triángulos, y Círculos Sin Tanto Rollo 😎</h1>
     </header>
-    
+
     <section>
 
         <h3>Aquí podras calcular el área y el perímetro de cualquier cuadrado, triángulo y círculo que tengas</h3>
@@ -102,76 +113,76 @@
 
         <form>
             <div class="figures-container">
-                <div class="figures-section new_color_figures">
+                <div class="figures-section-1 new_color_figures">
                     <div class="figures-first">
                         <label for="ladoCua">
-                            <img class="images" src="./assets/cuadrado.png">
+                            <img class="images-1" src="./assets/cuadrado.png">
                             <h4>Cuadrado</h4>
                             <h4>Lado:</h4>
                         </label>
-            
+
                         <input type="number" id="ladoCua" class="input">
-        
+
                         <br>
-            
+
                         <button type="button" class="button" onclick="calcularCuadrado_P()">Calcular Perímetro</button>
                         <br>
                         <button type="button" class="button" onclick="calcularCuadrado_A()">Calcular Área</button>
-    
+
                         <h4 id="cuadrado_result">✔</h4>
                     </div>
                 </div>
-    
-                <div class="figures-section new_color_figures">
+
+                <div class="figures-section-2 new_color_figures">
                     <div class="figures-second">
                         <label for="ladoT1">
-                            <img class="images triangulo_img" src="./assets/triangulo.png">
+                            <img class="images-2" src="./assets/triangulo.png">
                             <h4>Triángulo</h4>
                         </label>
-                        
+
                         <label for="ladoT1">
                             <h4 class="titles">(P) Primer lado:</h4>
                         </label>
                         <input type="number" id="ladoT1" class="input">
                         <br>
-    
+
                         <label for="ladoT2">
                             <h4 class="titles">(P) Segundo lado:</h4>
                         </label>
                         <input type="number" id="ladoT2" class="input">
                         <br>
-    
+
                         <label for="base">
                             <h4 class="titles">(P - A) Base:</h4>
                         </label>
                         <input type="number" id="base" class="input">
                         <br>
-    
+
                         <label for="altura">
                             <h4 class="titles">(A) Altura:</h4>
                         </label>
                         <input type="number" id="altura" class="input">
                         <br>
-        
+
                         <button type="button" class="button" onclick="calcularTriangulo_P()">Calcular Perímetro</button>
                         <br>
                         <button type="button" class="button" onclick="calcularTriangulo_A()">Calcular Área</button>
-    
+
                         <h4 id="triangulo_result">✔</h4>
                     </div>
                 </div>
 
-                <div class="figures-section new_color_figures">
+                <div class="figures-section-3 new_color_figures">
                     <div class="figures-third">
                         <label for="radio">
-                            <img class="images" src="./assets/circulo.png">
+                            <img class="images-3" src="./assets/circulo.png">
                             <h4>Círculo</h4>
                             <h4>Radio:</h4>
                         </label>
-                        
+
                         <input type="number" id="radio" class="input">
                         <br>
-        
+
                         <button type="button" class="button" onclick="calcularCirculo_P()">Calcular Perímetro</button>
                         <br>
                         <button type="button" class="button" onclick="calcularCirculo_A()">Calcular Área</button>

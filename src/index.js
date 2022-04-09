@@ -1,4 +1,4 @@
-// Código Cuadrado
+// Codigo Cuadrado
 
 function perimetroCuadrado(lado){
     return lado * 4;
@@ -8,7 +8,7 @@ function areaCuadrado(lado){
     return lado * lado;
 }
 
-// Código Triángulo
+// Codigo Triangulo
 
 function perimetroTriangulo(lado1, lado2, base){
     return parseInt(lado1) + parseInt(lado2) + parseInt(base);
@@ -18,7 +18,7 @@ function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
 
-// Código Círculo
+// Codigo Circulo
 
 function diametroCirculo(radio){
     return radio * 2;
@@ -37,7 +37,7 @@ function areaCirculo(radio){
 
 // Funciones HTML
 
-// Cuadrado Función
+// Cuadrado Funcion
 
 function calcularCuadrado_P(){
     const input = document.getElementById("ladoCua");
@@ -65,7 +65,7 @@ function calcularCuadrado_A(){
     }
 }
 
-// Triángulo Función
+// Triagulo Funcion
 
 function calcularTriangulo_P(){
     const input_l1 = document.getElementById("ladoT1");
@@ -106,7 +106,7 @@ function calcularTriangulo_A(){
     }
 }
 
-// Círculo Función
+// Circulo Funcion
 
 function calcularCirculo_P(){
     const input = document.getElementById("radio");

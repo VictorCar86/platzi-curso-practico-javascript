@@ -1,0 +1,93 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #bd48f9;
+    color: white;
+    margin: 0;
+    }
+header {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #9e36d2;
+}
+h3 {
+    text-align: center;
+}
+.figures-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: black;
+}
+.new_color_figures{
+    background-color: white;
+    border: 3px solid #494949;
+    border-radius: 20px;
+}
+.new_color_figures:hover {
+    background-color: #f9f5fd;
+    border: 3px solid #494949;
+    border-radius: 20px;
+}
+.figures-section-1 {
+    height: 520px;
+    width: 400px;
+}
+.images-1 {
+    height: 200px;
+    width: 200px;
+}
+.figures-section-2 {
+    width: 400px;
+    height: 740px;
+}
+.images-2 {
+    height: 235px;
+    width: 180px;
+}
+.images-2 + h4 {
+    margin-top: 0;
+}
+.figures-section-3 {
+    height: 520px;
+    width: 400px;
+}
+.images-3 {
+    height: 195px;
+    width: 195px;
+    margin-top: 20px;
+}
+.input {
+    width: 300px;
+    height: 30px;
+    background-color: #b85aff;
+    border-radius: 18px;
+    text-align: center;
+    color: #34194c;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #6e3685;
+    -webkit-appearance: none;
+    margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+        margin: 0;
+}
+.button {
+    background-color: #d36aff;
+    border: #6e3685 2px solid;
+    border-radius: 16px;
+    margin-top: 20px;
+    width: 168px;
+    height: 32px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold
+}
+.titles {
+    margin: 10px 0;
+}

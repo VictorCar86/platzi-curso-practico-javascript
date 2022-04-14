@@ -35,6 +35,8 @@ function areaCirculo(radio){
     return (radio * radio) * PI;
 }
 
+const fontSize = document.getElementsByClassName("result");
+
 // Funciones HTML
 
 // Cuadrado Funcion
@@ -45,9 +47,11 @@ function calcularCuadrado_P(){
 
     if (!value == "" && !value == 0) {
         const perimetro = perimetroCuadrado(value);
+        document.getElementById("cuadrado_result").style.fontSize = "25px";
         cuadrado_result.innerHTML = perimetro + "cm";
     }
     else {
+        document.getElementById("cuadrado_result").style.fontSize = "20px";
         cuadrado_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
@@ -58,10 +62,12 @@ function calcularCuadrado_A(){
 
     if (!value == "" && !value == 0) {
         const area = areaCuadrado(value);
+        document.getElementById("cuadrado_result").style.fontSize = "25px";
         cuadrado_result.innerHTML = area + "cm2";
     }
     else {
-        cuadrado_result.innerHTML = "Por favor ingrese los datos requeridos"
+        document.getElementById("cuadrado_result").style.fontSize = "20px";
+        cuadrado_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
 
@@ -80,10 +86,12 @@ function calcularTriangulo_P(){
     if (!lado1 == "" && !lado2 == "" && !base == "") {
         if (!lado1 == 0 && !lado2 == 0 && !base == 0) {
             const perimetro = perimetroTriangulo(lado1, lado2, base);
+            document.getElementById("triangulo_result").style.fontSize = "25px";
             triangulo_result.innerHTML = perimetro + "cm";
         }
     }
     else {
+        document.getElementById("triangulo_result").style.fontSize = "20px";
         triangulo_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
@@ -98,10 +106,12 @@ function calcularTriangulo_A(){
     if (!base == "" && !altura == "") {
         if (!base == 0 && !altura == 0) {
             const area = areaTriangulo(base, altura);
+            document.getElementById("triangulo_result").style.fontSize = "25px";
             triangulo_result.innerHTML = area + "cm2";
         }
     }
     else {
+        document.getElementById("triangulo_result").style.fontSize = "20px";
         triangulo_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
@@ -114,9 +124,11 @@ function calcularCirculo_P(){
 
     if (!value == "" && !value == 0) {
         const perimetro = perimetroCirculo(value);
+        document.getElementById("circulo_result").style.fontSize = "25px";
         circulo_result.innerHTML = perimetro + "cm";
     }
     else {
+        document.getElementById("circulo_result").style.fontSize = "20px";
         circulo_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
@@ -127,9 +139,11 @@ function calcularCirculo_A(){
 
     if (!value == "" && !value == 0) {
         const area = areaCirculo(value);
+        document.getElementById("circulo_result").style.fontSize = "25px";
         circulo_result.innerHTML = area + "cm2";
     }
     else {
+        document.getElementById("circulo_result").style.fontSize = "20px";
         circulo_result.innerHTML = "Por favor ingrese los datos requeridos";
     }
 }
